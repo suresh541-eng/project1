@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LiteApp Landing</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(to right, #e8ebf1, #0984e3);
+      color: #fff;
+      padding: 1rem 0;
+      color: #0984e3;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    /* navbar end */
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      padding: 4rem 0;
+    }
+
+    .hero-text {
+      flex: 1;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .store-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .store-buttons button {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* header end */
+
+    /* productivity start */
+    .productivity {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .productivity img {
+
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 100%;
+
+      height: auto;
+
+    }
+
+    .productivity-content {
+      align-content: center;
+      line-height: 2.0;
+    }
+
+    /* productivity end  */
+
+
+    /* cards start */
+
+    .card {
+      text-align: center;
+      background: #0984e3;
+      padding: 40px 40px;
+    }
+
+    .card h2 {
+      padding: 20px 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .cards-1 {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .cards-1 img {
+      width: 50%;
+      height: 50%;
+    }
+
+    .cards-2 {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+
+    }
+
+    .cards-2 img {
+      width: 50%;
+      height: 50%;
+    }
+
+    /* cards end */
+
+    /* Features start */
+
+    .feature-main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 20px;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      gap: 1rem;
+    }
+
+    .feature-icon {
+      flex: 0 0 50px;
+      height: 50px;
+      background-color: #eee;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    .feature-text h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.1rem;
+      color: #1518ca;
+    }
+
+    .feature-text p {
+      margin: 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Features end */
+
+
+    /* banner */
+    .banner {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIisaEMRIKfgeVSeZKfGIQVq19Mmitdnzzcw&s');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      color: white;
+      position: relative;
+    }
+
+    .banner h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .banner-content {
+      z-index: 2;
+      max-width: 90%;
+    }
+    /* banner end */
+
+
+    /* plan start */
+
+    .pricing-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      margin-bottom: 50px
+    }
+
+    .plan {
+      background-color: #ffa500;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      margin-bottom: 20px;
+
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+    }
+
+    .plan-header {
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .per-month {
+      font-size: 14px;
+      color: white;
+      text-align: center;
+    }
+
+    .plan-body {
+      background: white;
+      padding: 20px;
+      color: #333;
+      text-align: center;
+      border-radius: 30px;
+      margin: 10px;
+    }
+
+    .plan-body p {
+      margin: 10px 0;
+      font-size: 14px;
+      margin: 30px;
+    }
+
+    .plan-body button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #0033cc;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .plan-body button:hover {
+      background-color: #0022a1;
+    }
+    /* plan end */
+
+/*  footer start  */
+    
+     .logo-ending{
+       font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      text-align: center;
+      align-items: center;
+      padding: 40px 0px;
+     }
+
+
+      .subtitle {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 20px 0 10px;
+      text-align: center;
+    }
+
+     .description {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      font-size: 16px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .get-app {
+      margin: 20px 0 30px;
+      font-weight: bold;
+      text-align: center;
+      color: #b6ccdc;
+    }
+
+/* buttons */
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+
+    .btn {
+      background-color: orange;
+      color: #000;
+      font-weight: bold;
+      border-radius: 50px;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 200px;
+      font-size: 18px;
+      gap: 10px;
+      
+      
+    }
+
+    .btn a{
+      text-decoration: none;
+      color: #000;
+    }
+
+     .btn:hover {
+      transform: scale(1.03);
+    }
+
+
+     .social p {
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+     .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+     .social-icons a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      display: flex;
+      
+      align-items: center;
+      gap: 5px;
+    }
+
+    footer {
+      margin-top: 30px;
+      background-color: orange;
+      padding: 10px;
+      font-size: 14px;
+      color: #000;
+      text-align: center;
+    }
+
+
+
+    /* Responsive */
+
+
+
+
+    @media (max-width:768px) {
+      .productivity {
+        display: block;
+      }
+
+      .cards {
+        display: block;
+      }
+
+
+      .feature {
+        display: block;
+      }
+
+
+
+      .banner {
+        height: 60vh;
+      }
+
+      .banner h1 {
+        font-size: 1.8rem;
+      }
+
+      .banner p {
+        font-size: 1rem;
+      }
+
+      .pricing-container {
+        display: block;
+        padding: 40px 20px;
+        margin-bottom: 50px;
+      }
+
+
+    }
+
+    @media(min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .hero-text {
+        text-align: left;
+      }
+
+      .store-buttons {
+        justify-content: flex-start;
+      }
+
+      .cards {
+        flex-direction: row;
+        padding: 20px;
+
+      }
+
+ }
+ </style>
+
+
+
+   
+ 
+</head>
+
+<body>
+
+  <!-- Header and Navbar -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="logo" width="30">
+        <span>LiteApp</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="/about.html">About</a>
+        <a href="#">Career</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="container hero">
+      <div class="hero-text">
+        <h1>Showcase Your App With LiteApp</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+        <div class="store-buttons">
+          <button>▶ Play Store</button>
+          <button> App Store</button>
+          <button>🪟 Window Store</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/app-index-showcase-01.webp"
+          alt="App Preview">
+      </div>
+    </div>
+  </header>
+
+  <!-- Header and Navbar end -->
+
+
+
+  <!-- productivity start -->
+  <div class="container productivity">
+    <div>
+      <img
+        src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/app-index-showcase-02.webp"
+        alt="">
+    </div>
+    <div class="productivity-content">
+      <h2>Increase Productivity</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+      <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+      <strong>Constant Communication</strong>
+      <strong>Quality Matters</strong>
+    </div>
+  </div>
+
+  <div class="container productivity">
+
+    <div class="productivity-content">
+      <h2>Increase Productivity</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+      <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+      <strong>Constant Communication</strong>
+      <strong>Quality Matters</strong>
+    </div>
+
+    <div>
+      <img
+        src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/app-index-showcase-03.webp"
+        alt="">
+    </div>
+  </div>
+
+  <!-- productivity end -->
+
+
+  <!-- cards start -->
+
+  <div class="card">
+    <h2>What You Can Do With LiteApp</h2>
+    <div class="container cards">
+
+
+
+      <div class="cards-1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQri4BtQFzJitO4Tzd8PbOh7ski4hyaegBoCg&s" alt="">
+
+        <h3>Easily Manage</h3><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore.</p>
+      </div>
+
+
+      <div class="cards-2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtIRPQAJmebSpSNj-v4sDSl6NbyUGlp8NGEQ&s" alt="">
+
+        <h3>Easily Manage</h3><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore.</p>
+      </div>
+
+
+      <div class="cards-1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJIYz1GZLpFXPHGuqtf8KEVlypWc2qMprSAQ&s" alt="">
+
+        <h3>Easily Manage</h3><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore.</p>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- cards end -->
+
+
+  <!--feature start  -->
+  <div>
+    <h1 style="text-align: center;padding: 20px;color: #3633e4;">features</h1>
+  </div>
+
+  <div class=" container feature-main">
+    <section class="features">
+      <div class="feature">
+        <div class="feature-icon">📱</div>
+        <div class="feature-text">
+          <h3>Fully Responsive</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🎨</div>
+        <div class="feature-text">
+          <h3>Swift Performance</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🧑‍🧑‍🧒</div>
+        <div class="feature-text">
+          <h3>Customer Support</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🪩</div>
+        <div class="feature-text">
+          <h3>Migrate Data</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="features">
+      <div class="feature">
+        <div class="feature-icon">📱</div>
+        <div class="feature-text">
+          <h3>Impressive Design</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🛅</div>
+        <div class="feature-text">
+          <h3>Extreme Security</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🔄</div>
+        <div class="feature-text">
+          <h3>Data Syncing</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💶</div>
+        <div class="feature-text">
+          <h3>Payment Record</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!--feature end  -->
+
+  <!-- banner with text start -->
+
+  <div>
+    <div class="banner">
+      <div class="banner-text">
+
+        <h1>Checkout the video of <br>LiteApp</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore.</p>
+      </div>
+    </div>
+
+  </div>
+  <!-- banner with text  end-->
+
+  <!-- plan start-->
+  <div style="text-align: center;color: #3633e4;padding: 20px;">
+    <h1>Choose Plan</h1>
+  </div>
+  <div class="container">
+    <div class="pricing-container">
+      <!-- Premium Plan -->
+      <div class="plan">
+        <div class="plan-header">Premium</div>
+        <div class="price">$25</div>
+        <div class="per-month">per month</div>
+        <div class="plan-body">
+          <p>Increase Productivity 10%</p>
+          <p>250 GB Cloud Space</p>
+          <p>3 Months Support</p>
+          <p>2 Device Login</p>
+          <p>24/7 Contact</p>
+          <button>Purchase Now</button>
+        </div>
+      </div>
+      <!-- Golden plan -->
+      <div class="plan">
+        <div class="plan-header">Golden</div>
+        <div class="price">$50</div>
+        <div class="per-month">per month</div>
+        <div class="plan-body">
+          <p>Increse Productivity 15%</p>
+          <p>500 GB Cloud Space</p>
+          <p>6 Months Support</p>
+          <p>5 Device Login</p>
+          <p>24/7 Contact</p>
+          <button>Purchase Now</button>
+        </div>
+      </div>
+
+
+      <!--  Diamond plan  -->
+      <div class="plan">
+        <div class="plan-header">Diamond</div>
+        <div class="price">$100</div>
+        <div class="per-month">per month</div>
+        <div class="plan-body">
+          <p>Increase Productivity 25%</p>
+          <p>1000 GB Cloud Space</p>
+          <p>12 Months Support</p>
+          <p>10 Device Login</p>
+          <p>24/7 Contact</p>
+          <button>Purchase Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- plan end  -->
+
+
+  <!-- Testimonial start -->
+  <div style="text-align: center;color: #3633e4;padding: 20px;">
+    <h1>Testimonial</h1>
+  </div>
+
+  <div class="container productivity">
+    <div>
+      <img
+        src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/app-index-feedback.png"
+        alt="">
+    </div>
+    <div class="productivity-content">
+      <h2 style="color: #0910e3;">Sundar Menon</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+      <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+      <strong>Constant Communication</strong>
+      <strong>Quality Matters</strong>
+    </div>
+  </div>
+
+
+  <div class="container productivity">
+
+    <div class="productivity-content">
+      <h2 style="color: #0910e3;">Harshali Mehta</h2>
+      <p>From Banker to Investor, She is the one who is behind this great idea.Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
+        ultrices gravida.</p>
+      <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+      <strong>Constant Communication</strong>
+      <strong>Quality Matters</strong>
+    </div>
+
+    <div>
+      <img
+        src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/app-index-owner.png"
+        alt="">
+    </div>
+  </div>
+
+  <!-- Testimonial end -->
+
+  <!-- Best App -->
+
+  <div class="container" style="  box-shadow: 5px 5px 5px 5px lightblue">
+    <div class="container productivity">
+      <div>
+        <a href="https://play.google.com/store/games?hl=en_IN"><img
+          src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/Award/badge-2019.png"
+          alt=""></a>
+      </div>
+      <div class="productivity-content">
+        <h2 style="color: #dfe309;">Best App of 2018 Google Play Award</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+        <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+
+      </div>
+    </div>
+  </div><br>
+
+  <div class="container" style="  box-shadow: 10px 10px 10px 10px whitesmoke;padding: 50px 10px;">
+    <div class="container productivity">
+      <div>
+        <h1>Have any queries?
+          <br>Feel free to ask.
+        </h1>
+      </div>
+      <div class="productivity-content">
+        <div class="plan-body">
+          <button>Contact Us</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Best App end -->
+
+<!-- footer start -->
+
+ <div class="logo-ending">
+    <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="Logo"  width="30"/>
+  <h4>LiteApp</h4>
+  </div>
+
+  <div class="subtitle">Upgrade your customer experience.</div>
+  <div class="description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+  </div>
+
+   <div class="get-app">Get The App Now</div>
+
+
+
+   <div class="button-row">
+    <div class="btn">
+     <a href="https://play.google.com/store/games?hl=en_IN"> <img src="https://img.icons8.com/ios-filled/24/google-play.png" alt="Android" />ANDROID</a>
+      
+    </div>
+    <div class="btn">
+      <a href="https://www.apple.com/in/app-store/"><img src="https://img.icons8.com/ios-filled/24/mac-os.png" alt="iPhone" />IPHONE</a>
+      
+    </div>
+    <div class="btn">
+     <a href="https://apps.microsoft.com/home?hl=en-US&gl=US"><img src="https://img.icons8.com/ios-filled/24/windows8.png" alt="Windows" />WINDOWS</a> 
+      
+    </div>
+  </div>
+
+
+
+   <div class="social">
+    <p>Follow Us</p>
+    <div class="social-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/facebook.png"/>Facebook</a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/twitter.png"/>Twitter</a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/instagram-new.png"/>Instagram</a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/linkedin.png"/>LinkedIn</a>
+    </div>
+  </div>
+
+  <footer>© 2024 LiteApp | All Rights Reserved</footer>
+
+<!-- footer end -->
+
+</body>
+
+</html>
