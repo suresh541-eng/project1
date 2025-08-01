@@ -59,9 +59,10 @@
             text-decoration: none;
             font-size: 1rem;
         }
+
         /* navbar end */
 
-/* banner start */
+        /* banner start */
         .page-banner {
 
             background: linear-gradient(45deg, #009ec5cc 0%, #2e7eedcc 20%, #02225bcc 90%), url('https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/background-images/app-index-video.jpg');
@@ -76,6 +77,7 @@
             text-decoration: none;
             color: #fff;
         }
+
         /* banner end */
 
 
@@ -106,23 +108,189 @@
             align-content: center;
             line-height: 2.0;
         }
+
         /* productivity end  */
 
 
+        /* cards start */
+
+        .container1 {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h2 {
+  color: #0047ab;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
 
+card {
+ 
+  padding: 10px;
+  border: 10px solid rgb(37, 15, 238);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: #094ee3;
+}
+
+.card img {
+  width: 87%;
+  height: 197px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #000;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* cards end */
+.plan-body button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0dddcc;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
 
+/*  footer start  */
+    
+     .logo-ending{
+       font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      text-align: center;
+      align-items: center;
+      padding: 40px 0px;
+     }
 
 
-        
-    @media (max-width:768px) {
-      .productivity {
-        display: block;
-      }
+      .subtitle {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 20px 0 10px;
+      text-align: center;
+    }
+
+     .description {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      font-size: 16px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .get-app {
+      margin: 20px 0 30px;
+      font-weight: bold;
+      text-align: center;
+      color: #b6ccdc;
+    }
+
+/* buttons */
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0 20px;
     }
 
 
+    .btn {
+      background-color: orange;
+      color: #000;
+      font-weight: bold;
+      border-radius: 50px;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 200px;
+      font-size: 18px;
+      gap: 10px;
+      
+      
+    }
+
+    .btn a{
+      text-decoration: none;
+      color: #000;
+    }
+
+     .btn:hover {
+      transform: scale(1.03);
+    }
+
+
+     .social p {
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+     .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+     .social-icons a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      display: flex;
+      
+      align-items: center;
+      gap: 5px;
+    }
+
+    footer {
+      margin-top: 30px;
+      background-color: orange;
+      padding: 10px;
+      font-size: 14px;
+      color: #000;
+      text-align: center;
+    }
+
+
+
+
+
+
+        @media (max-width:768px) {
+            .productivity {
+                display: block;
+            }
+
+     .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+        }
     </style>
 </head>
 
@@ -137,7 +305,7 @@
             <nav class="nav-links">
                 <a href="/index.html">Home</a>
                 <a href="/about.html">About</a>
-                <a href="#">Career</a>
+                <a href="/Career.html">Career</a>
                 <a href="#">Blog</a>
                 <a href="#">Contact</a>
             </nav>
@@ -145,7 +313,7 @@
     </header>
     <!-- Navbar end -->
 
-<!-- Banner start -->
+    <!-- Banner start -->
     <div class="page-banner">
         <div class="container hero">
             <div class="hero-text">
@@ -155,7 +323,7 @@
             </div>
         </div>
     </div>
-<!-- Banner end -->
+    <!-- Banner end -->
 
 
 
@@ -168,7 +336,7 @@
     </div>
 
 
-<!-- productivity start -->
+    <!-- productivity start -->
     <div class="container productivity">
         <div>
             <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/app-index-showcase-02.webp"
@@ -182,18 +350,231 @@
                 quis sodales odio, eget rhoncus lectus. Ut odio massa, molestie nec odio at, scelerisque facilisis
                 libero. Cras vel ante mattis, maximus elit quis, feugiat tortor.</p>
             <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
-        
+
         </div>
     </div>
 
+
+
+    <div class="container productivity">
+
+        <div style="width: 93%;" class="productivity-content">
+            <h2>That's How We Begun</h2>
+            <p>Fusce nec est velit. Nam vitae quam ac velit laoreet dictum. Aliquam consectetur felis sed elit tempor,
+                id convallis leo gravida. Cras eu lacus commodo, tincidunt neque imperdiet, rhoncus dui. Donec consequat
+                nisl id mauris congue, ac finibus elit lobortis. Nullam ullamcorper tincidunt odio vel dictum. Maecenas
+                quis sodales odio, eget rhoncus lectus. Ut odio massa, molestie nec odio at, scelerisque facilisis
+                libero. Cras vel ante mattis, maximus elit quis, feugiat tortor.</p>
+            <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+
+        </div>
+        <div>
+            <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/app-index-showcase-01.webp"
+                alt="">
+        </div>
+    </div>
     <!-- productivity end  -->
 
 
+    <div style="line-height: 2.0;" class="container">
+        <h1 style="text-align: center;">Investors Words</h1>
+        <p style="font-weight: bolder;text-align: center;">Wealthy people invest first and spend whats left and broke
+            people spend first and invest whats left .</p>
+        <h4 style="text-align: center;">~Harshali</h4>
+    </div>
+
+
+    <!-- About us start -->
+    <div>
+        <h1 style="text-align: center; color: #094ee3; padding: 20px 0px;">About us</h1>
+    </div>
+
+
+    <div class="container productivity">
+        <div style="padding: 20px 0px; line-height: 2.0;">
+
+            <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/about/app-about-behind-the-app.jpg"
+                alt="">
+
+            <h2 style="color: #094ee3;">Our Story</h2>
+            <p style="width: 93%;">Fusce nec est velit. Nam vitae quam ac velit laoreet dictum. Aliquam consectetur
+                felis sed elit tempor,
+                id convallis leo gravida. Cras eu lacus commodo, tincidunt neque imperdiet, rhoncus dui. Donec consequat
+                nisl id mauris congue, ac finibus elit lobortis. Nullam ullamcorper tincidunt odio vel dictum. Maecenas
+                quis sodales odio, eget rhoncus lectus. Ut odio massa, molestie nec odio at, scelerisque facilisis
+                libero. Cras vel ante mattis, maximus elit quis, feugiat tortor.</p>
+            <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+        </div>
+        <div>
 
 
 
+            <div style="padding: 20px 0px;line-height: 2.0;">
+
+                <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/about/app-about-what-we-do.jpg"
+                    alt="">
+
+                <h2 style="color: #094ee3;">What We Do</h2>
+                <p>Fusce nec est velit. Nam vitae quam ac velit laoreet dictum. Aliquam consectetur felis sed elit
+                    tempor,
+                    id convallis leo gravida. Cras eu lacus commodo, tincidunt neque imperdiet, rhoncus dui. Donec
+                    consequat
+                    nisl id mauris congue, ac finibus elit lobortis. Nullam ullamcorper tincidunt odio vel dictum.
+                    Maecenas
+                    quis sodales odio, eget rhoncus lectus. Ut odio massa, molestie nec odio at, scelerisque facilisis
+                    libero. Cras vel ante mattis, maximus elit quis, feugiat tortor.</p>
+                <p>Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About us end -->
 
 
+    <!-- cards start -->
+
+    <div class="container">
+
+
+
+        <div class="container1">
+            <h2>Our Investment Partners</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/investors/app-investors-01.jpg" alt="Harshali Mehta">
+                    <h3>Harshali Mehta</h3>
+                    <p>Owner & Investor</p>
+                </div>
+                <div class="card">
+                    <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/investors/app-investors-02.jpg" alt="Siddhi Patel">
+                    <h3>Siddhi Patel</h3>
+                    <p>Investor</p>
+                </div>
+                <div class="card social-card">
+                    <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/investors/app-investors-03.jpg" alt="Kajal Sen">
+                    <div class="overlay">
+                    </div>
+                    <h3>Kajal Sen</h3>
+                    <p>Investor</p>
+                </div>
+                <div class="card">
+                    <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/investors/app-investors-04.jpg" alt="Aryan Gupta">
+                    <h3>Aryan Gupta</h3>
+                    <p>Investor</p>
+                </div> 
+                <div class="card">
+                    <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/investors/app-investors-05.jpg" alt="Amisha Chaudhari">
+                    <h3>Amisha Chaudhari</h3>
+                    <p>Investor</p>
+                </div>
+
+                <div class="card">
+                    <div>
+                    <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/investors/app-investors-06.jpg" alt="Amisha Chaudhari">
+                    </div>
+                    <h3>Amisha Chaudhari</h3>
+                    <p>Investor</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/investors/app-investors-07.jpg" alt="Amisha Chaudhari">
+                    <h3>Amisha Chaudhari</h3>
+                    <p>Investor</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/investors/app-investors-08.jpg" alt="Amisha Chaudhari">
+                    <h3>Amisha Chaudhari</h3>
+                    <p>Investor</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+        <!--cards end   -->
+
+
+<div style="padding: 60px 0px;" class="container">
+     <div style="border: #0984e3 solid; padding: 20px;" class=" productivity">
+      <div>
+        <h3 style="color: #094ee3;">Are you a investor? and want to invest
+        </h3>
+      </div>
+      <div class="productivity-content">
+        <div class="plan-body">
+          <button>Join Team </button>
+
+        </div>
+      </div>
+    </div>
+   
+</div>
+<!--  -->
+<div style="padding: 60px 0px;" class="container">
+<div class=" productivity">
+      <div>
+        <h1>Have any queries?
+          <br>Feel free to ask.
+        </h1>
+      </div>
+      <div class="productivity-content">
+        <div class="plan-body">
+          <button style="background-color: #094ee3;">Contact Us</button>
+
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--  -->
+
+
+<!-- footer start -->
+
+<div class="logo-ending">
+    <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="Logo"  width="30"/>
+  <h4>LiteApp</h4>
+  </div>
+
+  <div class="subtitle">Upgrade your customer experience.</div>
+  <div class="description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+  </div>
+
+   <div class="get-app">Get The App Now</div>
+
+
+
+   <div class="button-row">
+    <div class="btn">
+     <a href="https://play.google.com/store/games?hl=en_IN"> <img src="https://img.icons8.com/ios-filled/24/google-play.png" alt="Android" />ANDROID</a>
+      
+    </div>
+    <div class="btn">
+      <a href="https://www.apple.com/in/app-store/"><img src="https://img.icons8.com/ios-filled/24/mac-os.png" alt="iPhone" />IPHONE</a>
+      
+    </div>
+    <div class="btn">
+     <a href="https://apps.microsoft.com/home?hl=en-US&gl=US"><img src="https://img.icons8.com/ios-filled/24/windows8.png" alt="Windows" />WINDOWS</a> 
+      
+    </div>
+  </div>
+
+
+
+   <div class="social">
+    <p>Follow Us</p>
+    <div class="social-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/facebook.png"/>Facebook</a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/twitter.png"/>Twitter</a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/instagram-new.png"/>Instagram</a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/20/linkedin.png"/>LinkedIn</a>
+    </div>
+  </div>
+
+  <footer>© 2024 LiteApp | All Rights Reserved</footer>
 
 
 
