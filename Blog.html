@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiteApp Landing</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #222;
+        }
+
+        /* navbar start */
+
+        header {
+            background: linear-gradient(to right, #e8ebf1, #0984e3);
+            color: #fff;
+            padding: 1rem 0;
+            color: #0984e3;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        /* navbar end  */
+
+
+        /* banner start */
+        .page-banner {
+
+            background: linear-gradient(45deg, #009ec5cc 0%, #2e7eedcc 20%, #02225bcc 90%), url('https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/background-images/app-index-video.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 90px 0;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* banner end */
+
+        .text-center {
+            text-align: center;
+            padding: 29px 0px;
+            line-height: 2.0;
+        }
+
+
+        /* productivity start */
+        .productivity {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .productivity img {
+
+            margin: 0 auto;
+            max-width: 100%;
+            max-height: 100%;
+
+            height: auto;
+
+        }
+
+        .productivity-content {
+            align-content: center;
+            line-height: 2.0;
+        }
+
+        .checkit {
+
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0dddcc;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* productivity end */
+
+
+        /* blogs start */
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        .blog-left {
+            background: linear-gradient(145deg, #4a7efc, #5c90fc);
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .blog-left h2 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        .blog-left p {
+            margin-bottom: 20px;
+        }
+
+
+        .blog-left ul {
+            list-style: none;
+        }
+
+        .blog-left ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            font-weight: bold;
+        }
+
+        /*   Right Side  start */
+
+        .blog-right {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body .author {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .card-body h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-body p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0044ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* 2 to 4 blog start */
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card1 {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .card1 img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom-right-radius: 50px;
+        }
+
+        .card1-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card1-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .card1-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .card1-desc {
+            font-size: 14px;
+            color: #666;
+        }
+
+
+        .plan-body button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0d17dd;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+
+         /* footer start  */
+
+        .logo-ending {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            text-align: center;
+            align-items: center;
+            padding: 40px 0px;
+        }
+
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 20px 0 10px;
+            text-align: center;
+        }
+
+        .description {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            font-size: 16px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .get-app {
+            margin: 20px 0 30px;
+            font-weight: bold;
+            text-align: center;
+            color: #b6ccdc;
+        }
+
+        /* buttons */
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+
+        .btn {
+            background-color: orange;
+            color: #000;
+            font-weight: bold;
+            border-radius: 50px;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+            font-size: 18px;
+            gap: 10px;
+
+
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .btn:hover {
+            transform: scale(1.03);
+        }
+
+
+        .social p {
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            display: flex;
+
+            align-items: center;
+            gap: 5px;
+        }
+
+        footer {
+            margin-top: 30px;
+            background-color: orange;
+            padding: 10px;
+            font-size: 14px;
+            color: #000;
+            text-align: center;
+        }
+
+        /* footer ending */
+
+
+
+
+        /* responsive  */
+
+
+        @media (max-width:768px) {
+            .productivity {
+                display: block;
+                text-align: center;
+                line-height: 2.0;
+            }
+
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-right {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-left h2 {
+                font-size: 28px;
+            }
+
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card1 img {
+                height: 180px;
+            }
+
+            .card1-title {
+                font-size: 16px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="logo" width="30">
+                <span>LiteApp</span>
+            </div>
+            <nav class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/Career.html">Career</a>
+                <a href="/Blog.html">Blog</a>
+                <a href="/Contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <!-- navbar end -->
+
+    <!-- Banner start -->
+    <div class="page-banner">
+        <div class="container hero">
+            <div class="hero-text">
+                <h1 style="color: #fff;">Blog</h1>
+                <p style="color: #fff;font-weight: bold;"><a href="/index.html">Home</a> / Blog</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- Banner end -->
+
+
+    <div class="text-center">
+        <h2 style="color: #094ee3;">Blogs </h2>
+        <p style="font-weight: bold;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et tristique
+            quam. <br> Ut molestie nisl et
+            lobortis feugiat.</p>
+    </div>
+
+    <!-- productivity start -->
+    <div class="container productivity">
+        <div>
+            <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/blogs/blog01.jpg"
+                alt="">
+        </div>
+        <div style="width: 93%;" class="productivity-content">
+            <h1>How this app and this blog will help you to increase your productivity and creativity?</h1>
+            <p>Nullam sit amet nulla odio. Maecenas tristique erat ac urna tempor, non vulputate justo vulputate. Nullam
+                vitae lobortis ligula. In feugiat et libero ac congue. Nunc blandit massa at dapibus feugiat. Orci
+                varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lobortis varius
+                odio, in bibendum neque pretium nec. Mauris nec libero lacus. Aliquam varius metus in odio condimentum,
+                eu rhoncus ex facilisis. Nullam dictum nulla ac mattis tempus. Ut erat orci, porta vitae mi nec,
+                facilisis rhoncus tellus. Pellentesque turpis nunc, aliquam pulvinar tellus a, dapibus condimentum
+                felis. Cras hendrerit nisi nec mauris ultricies dictum. Nulla vitae velit quis nulla cursus sagittis.
+                Nulla at purus nunc.</p>
+            <button class="checkit" style="background-color: #094ee3;">Read More</button>
+        </div>
+    </div>
+
+    <!-- blogs start -->
+
+
+    <!-- first blog -->
+    <div style="padding: 30px 0px;" class="container">
+        <div class="blog-container">
+            <!-- Left Side -->
+            <div class="blog-left">
+                <p><strong>Blog Posts</strong></p>
+                <h2>Read the latest blogs posts</h2>
+                <p>Check the most readable blog posts, Insights and facts below</p>
+                <ul>
+                    <li>What make you to invest in LiteApp and how benificial it is?</li>
+                    <li>What make you to investment in LiteApp and how benificial it is?</li>
+                    <li>New AI Features include in latest update of LiteApp, see what's new except this</li>
+                    <li>Investment is not an easy thing.</li>
+                </ul>
+            </div>
+
+            <!-- Right Side -->
+            <div class="blog-right">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/blogs/blog02.jpg"
+                        alt="Office">
+                    <div class="card-body">
+                        <div class="author">
+                            <span>Shubham</span>
+                            <span>01 September, 2024</span>
+                        </div>
+                        <h3>What make you to invest in LiteApp and how benificial it is?</h3>
+                        <p>Nullam sit amet nulla odio. Maecenas tristique erat ac urna tempor, non vulputate justo
+                            vulputate. Nullam vitae lobortis ligula. In feugiat et libero ac congue. Nunc blandit massa
+                            at dapibus feugiat. Orci varius natoque penatibus et magni...</p>
+                        <a href="#" class="read-more">Read More »</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3" alt="Office">
+                    <div class="card-body">
+                        <div class="author">
+                            <span>Shubham</span>
+                            <span>01 September, 2024</span>
+                        </div>
+                        <h3>What make you to investment in LiteApp and how benificial it is?</h3>
+                        <p>Nullam sit amet nulla odio. Maecenas tristique erat ac urna tempor, non vulputate justo
+                            vulputate. Nullam vitae lobortis ligula. In feugiat et libero ac congue. Nunc blandit massa
+                            at dapibus feugiat. Orci varius natoque penatibus et magni...</p>
+                        <a href="#" class="read-more">Read More »</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- second blog -->
+    <div style="padding: 30px 0px;" class="container">
+        <div class="blog-grid">
+            <!-- Card 1 -->
+            <div class="card1">
+                <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/blogs/blog03.jpg"
+                    alt="Blog Image">
+                <div class="card1-content">
+                    <div class="card1-header">
+                        <span> Shubham</span>
+                        <span>01 September, 2024</span>
+                    </div>
+                    <div class="card1-title">What make you to investment in LiteApp and how benificial it is?</div>
+                    <div class="card1-desc">
+                        Nullam sit amet nulla odio. Maecenas tristique erat ac urna tempor, non vulputate justo
+                        vulputate. Nunc blandit massa at dapibus feugiat.
+                    </div>
+                    <a href="#" class="read-more">Read More »</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card1">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Blog Image">
+                <div class="card1-content">
+                    <div class="card1-header">
+                        <span>Shubham</span>
+                        <span>01 September, 2024</span>
+                    </div>
+                    <div class="card1-title">What make you to investment in LiteApp and how benificial it is?</div>
+                    <div class="card1-desc">
+                        Nullam vitae lobortis ligula. In feugiat et libero ac congue. Nunc blandit massa at dapibus
+                        feugiat.
+                    </div>
+                    <a href="#" class="read-more">Read More »</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card1">
+                <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/blogs/blog02.jpg"
+                    alt="Blog Image">
+                <div class="card1-content">
+                    <div class="card1-header">
+                        <span> Shubham</span>
+                        <span>01 September, 2024</span>
+                    </div>
+                    <div class="card1-title">What make you to investment in LiteApp and how benificial it is?</div>
+                    <div class="card1-desc">
+                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </div>
+                    <a href="#" class="read-more">Read More »</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- 3rd blog -->
+    <div style="padding: 30px 0px;" class="container">
+        <div class="blog-grid">
+            <!-- Card 1 -->
+            <div class="card1">
+                <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/blogs/blog03.jpg"
+                    alt="Blog Image">
+                <div class="card1-content">
+                    <div class="card1-header">
+                        <span> Shubham</span>
+                        <span>01 September, 2024</span>
+                    </div>
+                    <div class="card1-title">What make you to investment in LiteApp and how benificial it is?</div>
+                    <div class="card1-desc">
+                        Nullam sit amet nulla odio. Maecenas tristique erat ac urna tempor, non vulputate justo
+                        vulputate. Nunc blandit massa at dapibus feugiat.
+                    </div>
+                    <a href="#" class="read-more">Read More »</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card1">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Blog Image">
+                <div class="card1-content">
+                    <div class="card1-header">
+                        <span>Shubham</span>
+                        <span>01 September, 2024</span>
+                    </div>
+                    <div class="card1-title">What make you to investment in LiteApp and how benificial it is?</div>
+                    <div class="card1-desc">
+                        Nullam vitae lobortis ligula. In feugiat et libero ac congue. Nunc blandit massa at dapibus
+                        feugiat.
+                    </div>
+                    <a href="#" class="read-more">Read More »</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card1">
+                <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/blogs/blog02.jpg"
+                    alt="Blog Image">
+                <div class="card1-content">
+                    <div class="card1-header">
+                        <span> Shubham</span>
+                        <span>01 September, 2024</span>
+                    </div>
+                    <div class="card1-title">What make you to investment in LiteApp and how benificial it is?</div>
+                    <div class="card1-desc">
+                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </div>
+                    <a href="#" class="read-more">Read More »</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 4th blog -->
+    <div style="padding: 30px 0px;" class="container">
+        <div class="blog-grid">
+            <!-- Card 1 -->
+            <div class="card1">
+                <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/blogs/blog03.jpg"
+                    alt="Blog Image">
+                <div class="card1-content">
+                    <div class="card1-header">
+                        <span> Shubham</span>
+                        <span>01 September, 2024</span>
+                    </div>
+                    <div class="card1-title">What make you to investment in LiteApp and how benificial it is?</div>
+                    <div class="card1-desc">
+                        Nullam sit amet nulla odio. Maecenas tristique erat ac urna tempor, non vulputate justo
+                        vulputate. Nunc blandit massa at dapibus feugiat.
+                    </div>
+                    <a href="#" class="read-more">Read More »</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card1">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Blog Image">
+                <div class="card1-content">
+                    <div class="card1-header">
+                        <span>Shubham</span>
+                        <span>01 September, 2024</span>
+                    </div>
+                    <div class="card1-title">What make you to investment in LiteApp and how benificial it is?</div>
+                    <div class="card1-desc">
+                        Nullam vitae lobortis ligula. In feugiat et libero ac congue. Nunc blandit massa at dapibus
+                        feugiat.
+                    </div>
+                    <a href="#" class="read-more">Read More »</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card1">
+                <img src="https://staging.whiteorangesoftware.com/theme-liteapp-software-landing-template/assets/images/blogs/blog02.jpg"
+                    alt="Blog Image">
+                <div class="card1-content">
+                    <div class="card1-header">
+                        <span> Shubham</span>
+                        <span>01 September, 2024</span>
+                    </div>
+                    <div class="card1-title">What make you to investment in LiteApp and how benificial it is?</div>
+                    <div class="card1-desc">
+                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </div>
+                    <a href="#" class="read-more">Read More »</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- blogs end -->
+
+
+
+    <div style="padding: 60px 0px;" class="container">
+
+        <div class=" productivity">
+            <div>
+                <h1>Have any queries?
+                    <br>Feel free to ask.
+                </h1>
+            </div>
+            <div class="productivity-content">
+                <div class="plan-body">
+                    <button>Contact Us</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- footer start -->
+
+
+    <div class="logo-ending">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="Logo" width="30" />
+        <h4>LiteApp</h4>
+    </div>
+
+    <div class="subtitle">Upgrade your customer experience.</div>
+    <div class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Quis ipsum suspendisse ultrices gravida.
+    </div>
+
+    <div class="get-app">Get The App Now</div>
+
+
+    <!-- buttons start -->
+    <div class="button-row">
+        <div class="btn">
+            <a href="https://play.google.com/store/games?hl=en_IN"> <img
+                    src="https://img.icons8.com/ios-filled/24/google-play.png" alt="Android" />ANDROID</a>
+
+        </div>
+        <div class="btn">
+            <a href="https://www.apple.com/in/app-store/"><img src="https://img.icons8.com/ios-filled/24/mac-os.png"
+                    alt="iPhone" />IPHONE</a>
+
+        </div>
+        <div class="btn">
+            <a href="https://apps.microsoft.com/home?hl=en-US&gl=US"><img
+                    src="https://img.icons8.com/ios-filled/24/windows8.png" alt="Windows" />WINDOWS</a>
+
+        </div>
+    </div>
+    <!-- buttons end -->
+
+
+    <div class="social">
+        <p>Follow Us</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://img.icons8.com/ios-filled/20/facebook.png" />Facebook</a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/20/twitter.png" />Twitter</a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/20/instagram-new.png" />Instagram</a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/20/linkedin.png" />LinkedIn</a>
+        </div>
+    </div>
+
+
+    <footer>© 2024 LiteApp | All Rights Reserved</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
