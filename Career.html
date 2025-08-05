@@ -285,10 +285,71 @@
 
         /* footer ending */
 
+             /* General layout */
+.container.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hide checkbox and menu icon by default */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
 
 
 
         @media (max-width:768px) {
+
+                     header {
+    color: #fff;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 1000;
+  }
+  .nav-links a{
+    color:black !important;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+
             .productivity {
                 display: block;
                 text-align: center;
@@ -319,6 +380,10 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="logo" width="30">
                 <span>LiteApp</span>
             </div>
+
+             <!-- Hidden checkbox to toggle menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <nav class="nav-links">
                 <a href="/index.html">Home</a>
                 <a href="/about.html">About</a>

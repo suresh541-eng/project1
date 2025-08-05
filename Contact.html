@@ -314,18 +314,82 @@
         }
 
         /* footer ending */
+        /* General layout */
+.container.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Hide checkbox and menu icon by default */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+
 
 
 
 /* mobile responsive */
 
 @media (max-width: 768px) {
+  header {
+    color: #fff;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    z-index: 1000;
+  }
+  .nav-links a{
+    color:black !important;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
   .contact-section {
     flex-direction: column;
     gap: 20px;
   }
   .illustration img {
     max-width: 100%;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex
   }
 }
 
@@ -343,21 +407,27 @@
 <body>
 
     <!-- navbar -->
-    <header>
-        <div class="container navbar">
-            <div class="logo">
-                <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="logo" width="30">
-                <span>LiteApp</span>
-            </div>
-            <nav class="nav-links">
-                <a href="/index.html">Home</a>
-                <a href="/about.html">About</a>
-                <a href="/Career.html">Career</a>
-                <a href="/Blog.html">Blog</a>
-                <a href="/Contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+   <header>
+  <div class="container navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="logo" width="30">
+      <span>LiteApp</span>
+    </div>
+
+    <!-- Hidden checkbox to toggle menu -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <nav class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/Career.html">Career</a>
+      <a href="/Blog.html">Blog</a>
+      <a href="/Contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
     <!-- navbar end -->
 
      <!-- Banner start -->
@@ -410,8 +480,9 @@
     <h1 style="color: #0984e3;">Locate us on Map</h1>
 </div>
 
-
-
+<div style="text-align: center; " class="container">
+  <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.710896336028!2d78.3847189749369!3d17.473546083428403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9181213b3109%3A0x1eeea730a3eaaefc!2sSri%20Tower%2C%20KPHB%207th%20Phase%20Rd%2C%20K%20P%20H%20B%20Phase%207%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500085!5e0!3m2!1sen!2sin!4v1754283266820!5m2!1sen!2sin" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 
 <!-- location end  -->
 
