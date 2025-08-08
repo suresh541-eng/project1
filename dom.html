@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .role{
+        color:blue
+    } */
+    /* #roles{
+        color:red
+    } */
+    h4{
+        color:green
+    }
+</style>
+<body>
+    <h3 class="rolew">FrontEnd Developer</h3>
+    <h3 id="roles">BackEnd Developer</h3>
+    <h4 class="role">database Developer</h4>
+    <h5>namasthe</h5>
+    <h5>namasthe sir</h5>
+    <div class="card">Card</div>
+
+
+    <script>
+        const element = document.getElementsByClassName("rolew")
+        element.classList.add("active");
+
+        const hes = document.getElementsByClassName("role")
+        // hes[0].style.color = "yellow"
+        // hes[0].remove()
+        document.querySelectorAll(".role").style.border = "2px solid red"
+
+        const rol = document.getElementById("roles")
+        // rol.remove()
+        // rol.style.color = "blue"
+        // rol.style.fontSize = "12px"
+        // rol.style.border = "1px solid black"
+        // rol.style.padding = "12px"
+
+//   document.querySelector(".card").style.border = "1px solid black";
+
+
+        let tag = document.createElement("h1");
+        tag.textContent = "suresh";
+        document.body.appendChild(tag)
+        console.log(tag);
+
+        let my= document.createElement("p");
+        my.textContent ="sai 1,sai 2, murali,suresh"
+        document.body.appendChild(my)
+        console.log(my);
+
+        let su = document.getElementsByTagName("h5");
+        su[0].style.color ="blue"
+        su[1].style.color ="red"
+    </script>
+</body>
+</html>
